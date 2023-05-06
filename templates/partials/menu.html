@@ -1,0 +1,26 @@
+{%load static%}
+<div class="pagina-inicial">
+    <header class="cabecalho">
+        <div class="header">
+            <img class="logo" src="{% static 'Assets/img/logo.png' %}" alt="logo">
+            <h2 class="name_logo">Educador</h2>
+            <nav role="navigation" class="primary-navigation">
+                <ul class="menu">
+                    <li class="item-menu"><a href="{% url 'index' %}">Home</a></li>
+                    <li class="item-menu"><a href="{% url 'about' %}">Sobre</a></li>
+                        <ul class="dropdown">
+                            <li class="d-menu"><a href="{% url 'about' %}">Projeto</a></li>
+                            <li class="d-menu"><a href="{% url 'about' %}">Sobre Nós</a></li>
+                            <li class="d-menu"><a href="{% url 'about' %}">Contato</a></li>
+                        </ul>
+                    {% if user.is_authenticated %}
+                    <li class="item-menu"><a href="#">Painel</a></li>                
+                    <li class="item-menu"><a href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                    <li class="item-menu"><a href="{% url 'login' %}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </header>
+    

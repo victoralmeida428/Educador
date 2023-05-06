@@ -1,0 +1,16 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<form method="post" class="login">
+    <h2 style="text-align: center;">Login</h2>
+    {% csrf_token %}
+    {{form.as_p}}
+    <div class="lreg">
+        <input type="submit"
+                value="Login" 
+                class="btn">
+        <p>Caso não tenha um login <a href="{% url 'cadastro' %}">Registre-se</a>
+        <p>Esqueceu a senha? <a href="{% url 'recuperacao' %}">Clique aqui</a>
+    </div>
+</form>
+{% endblock %}

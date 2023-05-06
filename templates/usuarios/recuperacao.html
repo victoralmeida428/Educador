@@ -1,0 +1,14 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<form method="post" class="login">
+    <h2 style="text-align: center;">Recuperar Senha</h2>
+    {% csrf_token %}
+    {{form.as_p}}
+    <div class="lreg">
+        <input type="submit"
+                value="Enviar email" 
+                class="btn">
+    </div>
+</form>
+{%endblock%}

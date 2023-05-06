@@ -1,0 +1,232 @@
+:root{
+    background-image: linear-gradient(to right, rgb(188, 188, 234), rgb(198, 213, 224));
+    color:rgb(0, 0, 0);
+    font-size: 12px;
+    font-family: 'Anuphan', sans-serif;;
+
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 5% 0% auto;
+}
+.name_logo {
+    margin: 0;
+}
+
+.logo {
+    width: 50px; /* ou o tamanho desejado em pixels, por exemplo */
+    height: auto; /* permite que a altura seja ajustada automaticamente de acordo com a largura definida */
+  }
+
+
+.primary-navigation {
+      margin: 0 auto;
+      display: block;
+    
+      padding: 0 0 0 0;  
+      text-align: center;
+      font-size: 25px;}
+  
+ .item-menu {
+        list-style: none;
+        margin: 0 auto;
+        border-left: 2px solid #3ca0e7;
+        display: inline-block;
+        padding: 0 30px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        font-family: arvo;
+      }
+  
+.item-menu a {
+        color: black;
+        text-decoration: none;
+      }
+  
+.item-menu a:hover {
+        color: #4281ad;
+        text-decoration: underline;
+      }
+  
+.item-menu:hover {
+        cursor: pointer;
+      }
+  
+.dropdown {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+      }
+
+.item-menu:hover .dropdown{
+    visibility: hidden;
+    color: black;
+    opacity: 1;
+    display: none;
+    min-width: 250px;
+    text-align: left;
+    padding-top: 20px;
+    box-shadow: 0px 3px 5px -1px #ccc;
+}
+
+.d-menu{
+    clear: both;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-style: none;
+    font-size: 20px;
+    list-style: none;
+  }
+
+.d-menu a:hover {
+    padding-left: 10px;
+    border-left: 2px solid #3ca0e7;
+    transition: all 0.3s ease;
+  }
+
+  
+
+.login{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.lreg p{
+    text-align: center;
+}
+.login input, .cadastro input {
+    padding: 10px;
+}
+.btn {
+    width: 35%;
+    background-color: rgb(91, 91, 221);
+    border: rgb(91, 91, 221) solid;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.cadastro {
+    display: flex;
+    margin-top:5vw;
+    flex-direction: column;
+    font-size: 20px;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.cadastro input {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 20vw;
+}
+
+.cadastro select {
+    padding: 10px;
+    background-color: #fff;
+    width: 21.2vw;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.termos-de-uso input{
+    margin: -115px;
+}
+
+
+.errorlist{
+    list-style: none;
+    color: #571e15;
+    background-color: #edd4d4;
+    border-color: #edd4d4;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: .25rem;  
+}
+
+.alerta_sucesso{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: .25rem;  
+}
+
+.about{
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    overflow-y: scroll;
+}
+
+.about p{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#fundo-about{
+    margin-top: 15vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 165%;
+    z-index: -1;
+    opacity: 0.2;
+    position: absolute;
+}
+
+
