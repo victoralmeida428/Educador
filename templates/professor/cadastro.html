@@ -1,0 +1,17 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<form method="post" class="cadastro">
+    <h2 style="text-align: center;">Cadastro</h2>
+    {% csrf_token %}
+    {{form}}
+    <div class="termos-de-uso", style="height: auto;">
+        <input type="checkbox" name="Termos de uso" id="termos" checked required>
+        Aceito os <a href="" style="margin-left: 5px;">Termos de uso </a>
+    </div>
+    <input type="submit"
+        value="Cadastrar"
+        class="btn">
+</form>
+{% endblock %}

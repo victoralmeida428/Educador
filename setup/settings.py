@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.educador.apps.EducadorConfig',
     'apps.usuarios.apps.UsuariosConfig',
-    'bootstrap4',
+    'apps.professor.apps.ProfessorConfig',
 ]
 
 MIDDLEWARE = [

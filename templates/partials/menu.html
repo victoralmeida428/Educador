@@ -7,20 +7,30 @@
             <nav role="navigation" class="primary-navigation">
                 <ul class="menu">
                     <li class="item-menu"><a href="{% url 'index' %}">Home</a></li>
-                    <li class="item-menu"><a href="{% url 'about' %}">Sobre</a></li>
+                    <li class="item-menu" id="sobre"><a href="#">Sobre</a>
                         <ul class="dropdown">
-                            <li class="d-menu"><a href="{% url 'about' %}">Projeto</a></li>
+                            <li class="d-menu"><a href="{% url 'projeto' %}">Projeto</a></li>
                             <li class="d-menu"><a href="{% url 'about' %}">Sobre Nós</a></li>
-                            <li class="d-menu"><a href="{% url 'about' %}">Contato</a></li>
+                            <li class="d-menu"><a href="{% url 'contato' %}">Contato</a></li>
                         </ul>
+                    </li>
                     {% if user.is_authenticated %}
-                    <li class="item-menu"><a href="#">Painel</a></li>                
+                    <li class="item-menu"><a href="#">Painel</a>
+                        <ul class="dropdown">
+                            <li class="d-menu"><a href="{% url 'projeto' %}">Perfil</a></li>
+                            <li class="d-menu"><a href="{% url 'about' %}">Testes</a></li>
+                        </ul>
+                    </li>                
                     <li class="item-menu"><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
                     <li class="item-menu"><a href="{% url 'login' %}">Login</a></li>
+                    <li class="item-menu" id="login-prof"><a href="{% url 'login_prof' %}">Área do Professor</a></li>
                     {% endif %}
+                    
                 </ul>
+
             </nav>
         </div>
+        
     </header>
     

@@ -42,14 +42,14 @@ p {
 
 
 .primary-navigation {
-      margin: 0 auto;
-      display: block;
-    
-      padding: 0 0 0 0;  
-      text-align: center;
-      font-size: 25px;}
+    margin: 0vh 0vh 5vh 0px;
+    display: block;
+
+    padding: 0 0 0 0;  
+    text-align: center;
+    font-size: 25px;}
   
- .item-menu {
+ .item-menu{
         list-style: none;
         margin: 0 auto;
         border-left: 2px solid #3ca0e7;
@@ -65,6 +65,12 @@ p {
         color: black;
         text-decoration: none;
       }
+#sobre a:hover {
+        color: black;
+        text-decoration: none;
+        
+
+      }
   
 .item-menu a:hover {
         color: #4281ad;
@@ -76,19 +82,26 @@ p {
       }
   
 .dropdown {
-        visibility: visible;
-        opacity: 1;
-        position: relative;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        padding-left: 0;
+        font-size: 15px;
+        left: 0;
+        display: block;
+        margin:0 0 0 0; 
+        z-index: 5;
       }
 
-.item-menu:hover .dropdown{
-    visibility: hidden;
+.primary-navigation .menu .item-menu:hover .dropdown{
+    visibility: visible;
     color: black;
+    position: absolute;
     opacity: 1;
-    display: none;
+    display: block;
     min-width: 250px;
     text-align: left;
-    padding-top: 20px;
+    padding-top: 5px;
     box-shadow: 0px 3px 5px -1px #ccc;
 }
 
@@ -96,7 +109,7 @@ p {
     clear: both;
     width: 100%;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-style: none;
     font-size: 20px;
     list-style: none;
@@ -104,16 +117,36 @@ p {
 
 .d-menu a:hover {
     padding-left: 10px;
+    color: #3ca0e7;
+    text-decoration: underline;
     border-left: 2px solid #3ca0e7;
     transition: all 0.3s ease;
+
   }
 
-  
+#login-prof a{
+    font-size: 15px;
+    border: #73afe3 solid;
+    padding: 10px;
+    border-radius: 19px;
+
+}
+
+#login-prof a:hover{
+    font-size: 15px;
+    color: white;
+    border: #3ca0e7 solid;
+    padding: 10px;
+    border-radius: 19px;
+    background-color: #3ca0e7;
+    text-decoration: none;
+    
+
+} 
 
 .login{
     text-align: center;
     font-size: 20px;
-    margin-top: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,11 +156,12 @@ p {
 .lreg p{
     text-align: center;
 }
-.login input, .cadastro input {
+.login input, .cadastro input, .form input {
     padding: 10px;
+    margin-bottom: 10px;
 }
 .btn {
-    width: 35%;
+    width: auto;
     background-color: rgb(91, 91, 221);
     border: rgb(91, 91, 221) solid;
     color: #fff;
@@ -140,9 +174,8 @@ p {
     transform: scale(1.05);
 }
 
-.cadastro {
+.cadastro, .form {
     display: flex;
-    margin-top:5vw;
     flex-direction: column;
     font-size: 20px;
     justify-content: center;
@@ -203,7 +236,7 @@ p {
 
 .about{
     position: relative;
-    width: 100vw;
+    width: 95vw;
     height: fit-content;
     opacity: 1;
     display: flex;
@@ -229,4 +262,32 @@ p {
     position: absolute;
 }
 
+.principal {
+    width: 100%;
+  }
+  
+  .esquerda {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .spacer {
+    width: 50%;
+    float: left;
+    clear: both;
+  }
+  
+  .direita {
+    width: 50%;
+    float: left;
+    clear: both;
+  }
 
+
+
+footer{
+    text-align: center;
+    padding: 20px;
+}
