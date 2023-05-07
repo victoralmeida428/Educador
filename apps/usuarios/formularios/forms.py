@@ -25,6 +25,7 @@ class Login(forms.Form):
     
 class Cadastro(forms.ModelForm):
     senha = forms.CharField(widget=forms.PasswordInput, required=True)
+    senha_conf = forms.CharField(widget=forms.PasswordInput, required=True)
     nascimento = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
     class Meta:
         model = Usuarios
@@ -36,6 +37,24 @@ class Cadastro(forms.ModelForm):
         if len(padrao.findall(nome))>0:
             raise forms.ValidationError('Somente Letras')
         return nome
+    
+    def clean_senha_conf(self):
+        senha = self.cleaned_data['senha']
+        senha2 = self.cleaned_data['senha_conf']
+        if senha!=senha2:
+            raise forms.ValidationError('Senhas não coincidem')
+        return senha2
+    
+    def clean_login(self):
+        login = self.cleaned_data['login']
+        padrao = re.compile('[A-ZA-z]')
+        erro = re.compile('[À-Úà-ú]')
+        if erro.findall(login):
+            raise forms.ValidationError('Não é permitido caracteres acentuações')
+        elif not padrao.findall(login):
+            raise forms.ValidationError('não é permitido apenas valores numérico')           
+        else:
+            return login
     
 class Recuperacao(forms.Form):
     email = forms.EmailField(max_length=50, required=True)

@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'apps.educador.apps.EducadorConfig',
     'apps.usuarios.apps.UsuariosConfig',
     'apps.professor.apps.ProfessorConfig',
+    'apps.quiz.apps.QuizConfig',
+    'apps.painel.apps.PainelConfig',
+    'apps.nota.apps.NotaConfig',
 ]
 
 MIDDLEWARE = [

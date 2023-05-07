@@ -7,7 +7,7 @@ class Professores(models.Model):
     escola = models.CharField(max_length=100, blank=False, null=False)
     matricula = models.CharField(max_length=20, blank=False, null=False, default='0000000')
     senha = models.CharField(max_length=20, blank=False, null=False, default='123456')
-    senha_conf = models.CharField(max_length=20, blank=False, null=False, default='123456')
+    senha_conf = models.CharField(max_length=20, blank=False, )
     email = models.EmailField(blank=False, null=False)
     nascimento = models.DateField(blank=False, null=False)
 

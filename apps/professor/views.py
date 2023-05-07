@@ -17,7 +17,7 @@ def login(request):
         form = Login(request.POST)
         if form.is_valid():
             matricula = form.cleaned_data['matricula']
-            senha = Professores.objects.filter(login=matricula).values()
+            senha = Professores.objects.filter(matricula=matricula).values()
             usuario = auth.authenticate(
                 request,
                 username=matricula,

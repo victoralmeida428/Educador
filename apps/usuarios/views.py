@@ -37,6 +37,7 @@ def logout(request):
     messages.success(request, 'Logout efetuado com sucesso')
     return redirect('login')
 
+
 def cadastro(request):
     if request.method == 'GET':
         form = Cadastro()
@@ -82,3 +83,7 @@ def recuperacao(request):
         else:
             context = {'form': form}
             return render(request, 'usuarios/recuperacao.html', context)
+
+
+def painel(request):
+    return render(request, 'usuarios/painel.html')
