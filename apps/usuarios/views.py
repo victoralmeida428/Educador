@@ -86,4 +86,12 @@ def recuperacao(request):
 
 
 def painel(request):
-    return render(request, 'usuarios/painel.html')
+    padrao = re.compile('[A-Za-z]')
+    user = request.user
+    if padrao.findall(str(user)):
+        usuario = 'aluno'
+    else:
+        usuario = 'professor'
+    
+    context = {'usuario':usuario}
+    return render(request, 'usuarios/painel.html', context)

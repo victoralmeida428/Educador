@@ -7,8 +7,16 @@
     <div class="menu-lateral">
         <ul class="lateral">
             <li class="item-lateral" id="conta"><a href="{% url 'perfil'%}"> Minha Conta</a></li>
+            {%if usuario == 'aluno'%}
+            <li class="item-lateral" id="pessoa"><a href="{% url 'lista_professores'%}"> Buscar Professor</a></li>
             <li class="item-lateral" id="resultados"><a href="#"> Meus Resultados</a></li>
             <li class="item-lateral" id="testes"><a href="#"> Testes</a></li>
+            {%else%}
+            <li class="item-lateral" id="pessoa"><a href="#"> Meus Alunos</a></li>
+            <li class="item-lateral" id="testes"><a href="#"> Minhas Provas</a></li>
+            {%endif%}
+
+
         </ul>
     </div>
 

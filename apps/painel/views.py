@@ -13,4 +13,6 @@ def perfil(request):
         
     
     return render(request, 'painel/conta.html', context)
+
+
     

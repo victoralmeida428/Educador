@@ -167,11 +167,13 @@ p {
     color: #fff;
     font-size: 15px;
     font-weight: bold;
+    border-radius: 2px 15px 2px 15px;
+    margin-left: 20px;
+    height: auto;
 }
 
 .btn:hover {
     cursor: pointer;
-    transform: scale(1.05);
 }
 
 .cadastro, .form {
@@ -182,6 +184,13 @@ p {
     justify-items: center;
     text-align: center;
     align-items: center;
+}
+
+input{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 20vw;
+    height: 20px;
 }
 
 .cadastro input {
@@ -358,10 +367,52 @@ display: block;
     height: 15px;
 }
 
+#pessoa::before{
+    content: url('img/person_FILL0_wght400_GRAD0_opsz48.svg');
+    width: 15px;
+    height: 15px;
+}
+
 
 #testes::before{
     content: url('img/labs_FILL0_wght400_GRAD0_opsz48.svg');
     width: 15px;
     height: 15px;
 }
+/*
+tr{
+    border: black 1px solid;
+}
+.lista{
+    justify-items: center;
+    display: flex;
+    position: absolute;
+    margin: 10vw 0 0 30vw;
+}
+}*/
 
+.lista{
+    display: grid;
+    grid-template-columns: 25% auto;
+}
+.tabela-prof th{
+    padding-right: 10vw;
+    border-collapse: collapse;
+}
+
+.pwhite{
+    background-color: #e0e6c3;
+}
+
+.pgray{
+    background-color: #9fb3ca;
+}
+
+thead tr{
+    width: 100%;
+    background-color: #4c4c4c;
+    color: white;
+    text-align: center;
+    padding: 8px 5px;
+    border: none;
+}

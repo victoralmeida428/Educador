@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.quiz.apps.QuizConfig',
     'apps.painel.apps.PainelConfig',
     'apps.nota.apps.NotaConfig',
+    'apps.alunos.apps.AlunosConfig',
 ]
 
 MIDDLEWARE = [

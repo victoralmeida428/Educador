@@ -9,4 +9,5 @@ urlpatterns = [
     path('', include('apps.painel.urls')),
     path('', include('apps.nota.urls')),
     path('', include('apps.quiz.urls')),
+    path('', include('apps.alunos.urls')),
 ]

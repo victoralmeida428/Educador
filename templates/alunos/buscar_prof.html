@@ -1,0 +1,36 @@
+{%extends 'partials/base.html'%}
+{%load static%}
+{%block content %}
+<div class="lista">
+    <div>{% include 'partials/nav-lateral.html' %}</div>
+    <div>
+        <form action="" method="GET">
+            <input type="text" name="nome" placeholder="Procure seu professor">
+            <input type="submit" class="btn" value="Buscar">
+        </form>
+        {%if object_list%}
+        <table class="tabela-prof">
+            <thead>
+                <tr>
+                    <th>Matricula</th>
+                    <th>Nome</th>
+                    <th>Escola</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for prof in object_list%}
+                <tr class="pwhite {%cycle '' 'pgray'%}">
+                    <th><a href="#">{{prof.matricula}}</a></th>
+                    <th>{{prof.nome}}</th>
+                    <th>{{prof.escola}}</th>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        {%else%}
+        <p>Nenhum professor encontrado</p>
+        {%endif%}
+    </div>
+</div>
+
+{%endblock%}
